@@ -16,13 +16,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var precipitationLabel: UILabel!
     @IBOutlet weak var summaryLabel: UILabel!
+    @IBOutlet weak var refreshButton: UIButton!
+    @IBOutlet weak var refreshActivityIndicator: UIActivityIndicatorView!
     
     private let apiKey = "2e978c5a35d93ebd7a2f32fb8462069e"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        refreshActivityIndicator.hidden = true
+        getCurrentWeatherData()
+    }
+    
+    func getCurrentWeatherData() -> Void {
         let baseURL = NSURL(string: "https://api.forecast.io/forecast/\(apiKey)/")
         let forecastURL = NSURL(string: "28.642416,-106.076300", relativeToURL: baseURL)
         
@@ -40,6 +46,11 @@ class ViewController: UIViewController {
                     self.humidityLabel.text = "\(currentWeather.humidity)"
                     self.precipitationLabel.text = "\(currentWeather.precipProbability)"
                     self.summaryLabel.text = "\(currentWeather.summary)"
+                    
+                    //stop refresh animation
+                    self.refreshActivityIndicator.stopAnimating()
+                    self.refreshActivityIndicator.hidden = true
+                    self.refreshButton.hidden = false
                 })
             }
             
@@ -50,6 +61,14 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    @IBAction func refresh() {
+        getCurrentWeatherData()
+        refreshButton.hidden = true
+        refreshActivityIndicator.hidden = false
+        refreshActivityIndicator.startAnimating()
     }
 
 
