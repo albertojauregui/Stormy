@@ -17,7 +17,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         let baseURL = NSURL(string: "https://api.forecast.io/forecast/\(apiKey)/")
-        let forecastURL = NSURL(string: "28.642416, -106.076300", relativeToURL: baseURL)
+        let forecastURL = NSURL(string: "28.642416,-106.076300", relativeToURL: baseURL)
+        
+        let weatherData = NSData(contentsOfURL: forecastURL!, options: nil, error: nil)
     }
 
     override func didReceiveMemoryWarning() {
