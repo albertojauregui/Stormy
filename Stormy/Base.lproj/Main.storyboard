@@ -53,45 +53,65 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="At 5:18 AM it is" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laC-X3-OyB">
-                                <rect key="frame" x="103" y="196" width="115" height="19"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="At 5:18 AM it is" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laC-X3-OyB">
+                                <rect key="frame" x="107" y="196" width="106" height="19"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chihuahua México" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlM-OR-Vot">
-                                <rect key="frame" x="73" y="94" width="176" height="26"/>
+                                <rect key="frame" x="104" y="109" width="176" height="26"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudy-night" translatesAutoresizingMaskIntoConstraints="NO" id="dWc-XS-FqK">
+                                <rect key="frame" x="38" y="92" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="XxH-oJ-c6l"/>
+                                    <constraint firstAttribute="height" constant="60" id="edy-Zk-7Wa"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.29019607843137252" green="0.56470588235294117" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="2Ak-uQ-YKc" firstAttribute="top" secondItem="laC-X3-OyB" secondAttribute="bottom" constant="-17" id="0p1-fZ-wdU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bbG-fm-CSV" secondAttribute="trailing" constant="36" id="1zn-7Z-7hW"/>
-                            <constraint firstAttribute="centerX" secondItem="zlM-OR-Vot" secondAttribute="centerX" constant="-0.5" id="9ep-vH-oM2"/>
-                            <constraint firstItem="zlM-OR-Vot" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="74" id="GSF-Yf-SyH"/>
                             <constraint firstAttribute="centerY" secondItem="2Ak-uQ-YKc" secondAttribute="centerY" id="HP0-Ex-voM"/>
                             <constraint firstItem="zsf-ES-PSG" firstAttribute="top" secondItem="e1C-Os-Ee7" secondAttribute="bottom" constant="10" id="IyY-Gq-e6Z"/>
                             <constraint firstAttribute="centerX" secondItem="2Ak-uQ-YKc" secondAttribute="centerX" constant="-0.5" id="OdU-pS-gd7"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="2MY-xw-YOY" secondAttribute="bottom" constant="90" id="Orz-mY-gX8"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="e1C-Os-Ee7" secondAttribute="bottom" constant="177" id="Qcg-Zo-hHv"/>
+                            <constraint firstAttribute="centerX" secondItem="zlM-OR-Vot" secondAttribute="centerX" constant="-32" id="Xsd-j9-6Ok"/>
+                            <constraint firstItem="zlM-OR-Vot" firstAttribute="leading" secondItem="dWc-XS-FqK" secondAttribute="trailing" constant="6" id="crB-dr-yzg"/>
                             <constraint firstItem="bbG-fm-CSV" firstAttribute="top" secondItem="u9q-37-CUk" secondAttribute="bottom" constant="10" id="dSz-28-mBO"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="u9q-37-CUk" secondAttribute="bottom" constant="177" id="euU-jz-ECH"/>
                             <constraint firstItem="zsf-ES-PSG" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="47" id="ggS-Og-iEG"/>
+                            <constraint firstItem="dWc-XS-FqK" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="72" id="hWN-HL-WVy"/>
                             <constraint firstAttribute="centerX" secondItem="laC-X3-OyB" secondAttribute="centerX" id="jl7-tO-5Ao"/>
                             <constraint firstAttribute="centerX" secondItem="2MY-xw-YOY" secondAttribute="centerX" id="p0Z-tk-oLD"/>
                             <constraint firstItem="e1C-Os-Ee7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="40" id="wP8-rG-oEI"/>
+                            <constraint firstItem="zlM-OR-Vot" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="89" id="xSe-0B-J0l"/>
                             <constraint firstAttribute="trailingMargin" secondItem="u9q-37-CUk" secondAttribute="trailing" constant="40" id="zC0-6W-Pph"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentTimeLabel" destination="laC-X3-OyB" id="QaM-iV-1Jt"/>
+                        <outlet property="humidityLabel" destination="zsf-ES-PSG" id="kWc-Wa-adG"/>
+                        <outlet property="iconView" destination="dWc-XS-FqK" id="3lf-lg-XZN"/>
+                        <outlet property="precipitationLabel" destination="bbG-fm-CSV" id="Bid-09-0Ho"/>
+                        <outlet property="summaryLabel" destination="2MY-xw-YOY" id="wjw-rc-88A"/>
+                        <outlet property="temperatureLabel" destination="2Ak-uQ-YKc" id="vVs-kw-Cgg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="225" y="303"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cloudy-night" width="46" height="43"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -10,6 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var iconView: UIImageView!
+    @IBOutlet weak var currentTimeLabel: UILabel!
+    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var humidityLabel: UILabel!
+    @IBOutlet weak var precipitationLabel: UILabel!
+    @IBOutlet weak var summaryLabel: UILabel!
+    
     private let apiKey = "2e978c5a35d93ebd7a2f32fb8462069e"
 
     override func viewDidLoad() {
@@ -25,8 +32,7 @@ class ViewController: UIViewController {
                 let dataObject = NSData(contentsOfURL: location)
                 let weatherDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataObject!, options: nil, error: nil) as NSDictionary
                 let currentWeather = Current(weatherDictionary: weatherDictionary)
-                println(currentWeather.currentTime!)
-
+                
             }
             
         })
